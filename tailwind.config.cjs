@@ -5,15 +5,14 @@ const config = {
 		extend: {
 			colors: {
 				textColor: '#3d4452',
-				textColorHover: '#1a202b'
+				textColorDark: '#1a202b'
 			}
 		},
 		fontFamily: {
-			sans: ['Open Sans', 'sans-serif']
+			sans: ['Open Sans', 'sans-serif'],
+			serif: ['PT Serif', 'serif']
 		}
-	},
-
-	plugins: []
+	}
 };
 
 module.exports = config;

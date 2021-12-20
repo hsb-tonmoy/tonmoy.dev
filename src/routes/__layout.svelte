@@ -3,7 +3,7 @@
 	import Nav from '$lib/layout/nav.svelte';
 </script>
 
-<div class="container mx-auto text-textColor">
+<div class="max-w-[1170px] flex flex-col mx-auto text-textColor">
 	<Nav />
 	<slot />
 </div>
