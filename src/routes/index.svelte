@@ -3,24 +3,40 @@
 </script>
 
 <main class="mx-auto">
-	<div id="header" class="flex items-center mb-24">
-		<div id="hero" class="w-7/12 mt-12">
-			<h1 class="text-[2.5rem] font-serif mb-4 text-textColorDark">Hello, I am Tonmoy</h1>
-			<p class="text-[1.25rem] leading-[1.5] opacity-90">
+	<div id="header" class="flex flex-col md:flex-row items-center mb-24">
+		<div id="hero" class="md:w-7/12 w-full mt-4 md:mt-12">
+			<h1
+				class="md:text-[2.5rem] text-[2rem] font-serif mb-4 text-textColorBold dark:text-textColorBoldDark"
+			>
+				Hello, I am Tonmoy
+			</h1>
+			<p class="md:text-[1.25rem] text-[1rem] leading-[1.5] opacity-90">
 				A product design consultant from India, focusing on user experience, visual and interaction
 				design. This is my personal blog
 			</p>
 		</div>
-		<div class="w-1/12" />
-		<div id="photo" class="flex justify-end items-center w-4/12 mt-12">
+		<div class="w-1/12 hidden md:block" />
+		<div id="photo" class="flex md:justify-end items-center md:w-4/12 w-full mt-12">
 			<img
-				class="drop-shadow-lg w-11/12"
-				src="https://saima.gbjsolution.com/content/images/size/w600/2020/04/saima-gul-headshot.jpg"
+				class="relative drop-shadow-lg w-full md:w-11/12"
+				src="/tonmoy-headshot.jpg"
 				alt="tonmoy"
 			/>
 		</div>
 	</div>
-	<div class="posts w-[700px] mx-auto mt-24 flex flex-col">
+	<div class="posts md:w-[700px] w-full mx-auto mt-24 flex flex-col">
 		<Post />
 	</div>
 </main>
+
+<style>
+	img::before {
+		content: '';
+		position: absolute;
+		top: 30px;
+		right: -30px;
+		border: 10px solid rgba(0, 0, 0, 0.5);
+		width: 100%;
+		height: 100%;
+	}
+</style>

@@ -1,11 +1,14 @@
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-
+	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
+				accentColor: '#c36',
 				textColor: '#3d4452',
-				textColorDark: '#1a202b'
+				textColorBold: '#1a202b',
+				textColorDark: '#c2c3c7',
+				textColorBoldDark: '#ebebec'
 			}
 		},
 		fontFamily: {
