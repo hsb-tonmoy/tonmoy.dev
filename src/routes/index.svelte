@@ -39,13 +39,8 @@
 		</div>
 	</div>
 	<div class="posts md:w-[700px] w-full mx-auto mt-24 flex flex-col">
-		{#each posts as post}
-			<Post
-				category={post.category.name}
-				date={post.date}
-				title={post.title}
-				excerpt={post.excerpt}
-			/>
+		{#each posts as { title, slug, excerpt, categories, date }}
+			<Post {slug} {categories} {date} {title} {excerpt} />
 		{/each}
 	</div>
 </main>
