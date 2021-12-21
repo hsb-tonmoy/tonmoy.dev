@@ -1,5 +1,19 @@
+<script context="module">
+	export const load = async ({ fetch }) => {
+		const res = await fetch('/posts.json');
+		if (res.ok) {
+			const { posts } = await res.json();
+			return {
+				props: { posts }
+			};
+		}
+	};
+</script>
+
 <script>
 	import Post from '$lib/blog/post.svelte';
+
+	export let posts;
 </script>
 
 <main class="mx-auto">
@@ -25,7 +39,14 @@
 		</div>
 	</div>
 	<div class="posts md:w-[700px] w-full mx-auto mt-24 flex flex-col">
-		<Post />
+		{#each posts as post}
+			<Post
+				category={post.category.name}
+				date={post.date}
+				title={post.title}
+				excerpt={post.excerpt}
+			/>
+		{/each}
 	</div>
 </main>
 
