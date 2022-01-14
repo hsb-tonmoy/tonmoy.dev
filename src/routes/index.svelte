@@ -16,6 +16,10 @@
 	export let posts;
 </script>
 
+<svelte:head>
+	<title>Hasibuzzaman Tonmoy</title>
+</svelte:head>
+
 <main class="mx-auto">
 	<div id="header" class="flex flex-col md:flex-row items-center mb-24">
 		<div id="hero" class="md:w-7/12 w-full mt-4 md:mt-12">

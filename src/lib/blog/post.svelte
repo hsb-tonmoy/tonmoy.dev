@@ -3,7 +3,7 @@
 </script>
 
 <article class="flex flex-col py-12 border-solid border-b dark:border-[#353746]">
-	<span class="breadcrumbs uppercase text-sm mb-8" style="color: #a1a6b1">
+	<span class="post-info text-[#a1a6b1] uppercase text-sm mb-8">
 		{categories[0].name} / {date} / 4 MIN READ / 0 COMMENTS
 	</span>
 	<h2

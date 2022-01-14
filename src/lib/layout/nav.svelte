@@ -11,7 +11,7 @@
 
 <header class="flex py-7 justify-between items-center">
 	<div id="logo" class="font-bold text-textColorBold dark:text-textColorBoldDark text-base">
-		tonmoy.dev
+		<a href="/">tonmoy.dev</a>
 	</div>
 	<nav class="md:flex hidden items-center gap-x-4 text-sm">
 		<a href="/" class="active">Home</a>

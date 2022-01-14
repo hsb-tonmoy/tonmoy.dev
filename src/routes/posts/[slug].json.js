@@ -8,8 +8,14 @@ export const get = async (req) => {
 			query Post($slug: String!) {
 				post(where: { slug: $slug }) {
 					title
+					categories {
+						name
+					}
 					content {
-						markdown
+						html
+					}
+					coverImage {
+						url
 					}
 					date
 					publishedAt
