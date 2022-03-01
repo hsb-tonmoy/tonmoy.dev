@@ -1,7 +1,12 @@
+const colors = require('tailwindcss/colors');
+
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: 'class',
 	theme: {
+		colors: {
+			...colors
+		},
 		extend: {
 			colors: {
 				accentColor: '#c36',
@@ -14,6 +19,7 @@ const config = {
 		fontFamily: {
 			sans: ['Open Sans', 'sans-serif'],
 			serif: ['PT Serif', 'serif'],
+			avenir: ['Avenir LT Std'],
 			jost: ['Jost', 'sans-serif']
 		}
 	}

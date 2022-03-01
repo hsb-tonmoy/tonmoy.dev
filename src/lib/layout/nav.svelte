@@ -9,40 +9,34 @@
 	}
 </script>
 
-<header class="flex mt-10 py-5 justify-between items-center font-jost">
-	<div
-		id="logo"
-		class="text-textColorBold dark:text-textColorBoldDark text-xl font-black uppercase"
-	>
+<header
+	class="flex mt-10 py-5 justify-between items-center font-avenir text-black dark:text-textColorBoldDark"
+>
+	<div id="logo" class="text-xl lg:text-3xl font-black uppercase">
 		<a href="/">Tonmoy.</a>
 	</div>
-	<nav class="md:flex hidden items-center gap-x-4 text-sm">
+	<nav class="md:flex hidden items-center gap-x-8 text-base font-medium">
 		<a href="/" class="active">Home</a>
-		<a href="#" class="">About Me</a>
-		<a href="#" class="">Portfolio</a>
-		<a href="#" class="">Resume</a>
-		<a href="#" class="">Contact Me</a>
+		<a href="/about" class="">About Me</a>
+		<a href="/portfolio" class="">Portfolio</a>
+		<a href="/contact" class="">Contact Me</a>
+		<div id="buttons" class="flex items-center gap-x-4 pb-[6px]">
+			{#if dark}
+				<button on:click={toggleDarkMode} class="">{@html sun}</button>
+			{:else}
+				<button on:click={toggleDarkMode} class="">{@html moon}</button>
+			{/if}
+			<button class="">{@html search}</button>
+			<button class="block md:hidden">{@html menu}</button>
+		</div>
 	</nav>
-	<div id="buttons" class="flex gap-x-4">
-		{#if dark}
-			<button on:click={toggleDarkMode} class="">{@html sun}</button>
-		{:else}
-			<button on:click={toggleDarkMode} class="">{@html moon}</button>
-		{/if}
-		<button class="">{@html search}</button>
-		<button class="block md:hidden">{@html menu}</button>
-	</div>
 </header>
 
 <style lang="postcss">
 	nav a {
-		@apply hover:text-textColorBold dark:hover:text-textColorBoldDark;
+		@apply inline-block relative pb-[6px] dark:hover:text-textColorBoldDark;
 	}
-	nav a {
-		display: inline-block;
-		position: relative;
-		padding-bottom: 2px;
-	}
+
 	nav a::after {
 		content: '';
 		position: absolute;
