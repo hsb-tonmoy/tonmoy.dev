@@ -13,7 +13,8 @@ const config = {
 		},
 		fontFamily: {
 			sans: ['Open Sans', 'sans-serif'],
-			serif: ['PT Serif', 'serif']
+			serif: ['PT Serif', 'serif'],
+			jost: ['Jost', 'sans-serif']
 		}
 	}
 };

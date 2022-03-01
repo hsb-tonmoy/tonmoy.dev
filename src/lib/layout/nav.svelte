@@ -9,9 +9,12 @@
 	}
 </script>
 
-<header class="flex py-7 justify-between items-center">
-	<div id="logo" class="font-bold text-textColorBold dark:text-textColorBoldDark text-base">
-		<a href="/">tonmoy.dev</a>
+<header class="flex mt-10 py-5 justify-between items-center font-jost">
+	<div
+		id="logo"
+		class="text-textColorBold dark:text-textColorBoldDark text-xl font-black uppercase"
+	>
+		<a href="/">Tonmoy.</a>
 	</div>
 	<nav class="md:flex hidden items-center gap-x-4 text-sm">
 		<a href="/" class="active">Home</a>
