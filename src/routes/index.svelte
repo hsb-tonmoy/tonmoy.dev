@@ -22,9 +22,12 @@
 	<title>Hasibuzzaman Tonmoy</title>
 </svelte:head>
 
-<main class="mt-32">
-	<div id="top" class="flex justify-between items-center mb-24 font-avenir">
-		<div id="hero" class="flex flex-col gap-y-8 w-2/5">
+<main class="mt-12 md:mt-32">
+	<div
+		id="top"
+		class="flex flex-wrap flex-col-reverse md:flex-row justify-between items-center mb-24 font-avenir"
+	>
+		<div id="hero" class="flex flex-col gap-y-8 w-full md:w-2/4 lg:w-2/5">
 			<h1 class="text-2xl text-black font-medium dark:text-textColorBoldDark">
 				Hello, I am Tonmoy
 			</h1>
@@ -58,14 +61,12 @@
 			</div>
 		</div>
 
-		<div id="photo" class="flex justify-end items-center w-3/5 mt-12">
-			<!-- <img
-				class="relative drop-shadow-lg w-72 h-72 rounded-full"
-				src="/tonmoy-headshot.jpg"
-				alt="tonmoy"
-			/> -->
-			<div class="left_hero_header">
-				<div class="circle">
+		<div
+			id="photo"
+			class="flex justify-center md:justify-end items-center w-full md:w-2/4 lg:w-3/5 pb-20 md:pb-0"
+		>
+			<div class="w-[475px] max-w-[80%] lg:max-w-[60%] md:pr-10">
+				<div class="circle relative">
 					<div class="bg_img" />
 					<img src="/square.jpg" alt="" />
 					<div class="circle_holder_blue"><span /></div>
@@ -75,14 +76,17 @@
 						<span />
 						<span />
 					</div>
-					<a href="#" class="person_info">
+					<a
+						href="#"
+						class="person_info block absolute right-0 md:right-[5%] bottom-10 md:bottom-[50px] w-12 h-12 md:w-[60px] md:h-[60px] bg-black rounded-full text-white z-30 cursor-pointer"
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							xmlnsXlink="http://www.w3.org/1999/xlink"
 							version="1.1"
 							viewBox="0 0 512 512"
 							enableBackground="new 0 0 512 512"
-							class="fill-white fn__svg replaced-svg"
+							class="fill-white absolute w-4 h-4 md:w-5 md:h-5 left-2/4 top-2/4 -mt-[8px] -ml-[8px] md:-mt-[10px] md:-ml-[10px]"
 						>
 							<g>
 								<g>
@@ -121,14 +125,7 @@
 		width: 100%;
 		height: 100%;
 	}
-	.left_hero_header {
-		width: 475px;
-		max-width: 60%;
-		padding-right: 40px;
-	}
-	.circle {
-		position: relative;
-	}
+
 	.circle .bg_img {
 		background-image: url('/tonmoy-headshot.jpg');
 		position: absolute;
@@ -200,23 +197,7 @@
 		left: 64%;
 		top: -24%;
 	}
-	.right_hero_header {
-		width: 50%;
-	}
-	.person_info {
-		position: absolute;
-		right: 5%;
-		bottom: 50px;
-		z-index: 25;
-		cursor: pointer;
-		display: block;
-		text-decoration: none;
-		width: 60px;
-		height: 60px;
-		background-color: #000;
-		border-radius: 50%;
-		color: #fff;
-	}
+
 	.person_info:after {
 		content: '';
 		display: block;
