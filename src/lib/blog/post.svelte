@@ -3,15 +3,15 @@
 </script>
 
 <article class="flex flex-col py-12 border-solid border-b dark:border-[#353746]">
-	<span class="post-info text-[#a1a6b1] uppercase text-sm mb-8">
+	<span class="post-info text-[#a1a6b1] uppercase text-xs mb-2">
 		{categories[0].name} / {date} / 4 MIN READ / 0 COMMENTS
 	</span>
 	<h2
-		class="md:text-[2rem] text-2xl leading-[1.3] font-serif text-textColorBold dark:text-textColorBoldDark mb-5"
+		class="md:text-[2rem] text-lg leading-[1.3] text-textColorBold dark:text-textColorBoldDark -ml-1 mb-5"
 	>
 		<a href={`/posts/${slug}`}>{title}</a>
 	</h2>
-	<p class="text-base text-justify leading-loose">
+	<p class="text-sm text-justify leading-loose">
 		{excerpt}
 	</p>
 </article>

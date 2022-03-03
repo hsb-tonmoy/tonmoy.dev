@@ -17,13 +17,12 @@
 	export let posts;
 </script>
 
-<svelte:head>
-	<title>Hasibuzzaman Tonmoy</title>
-</svelte:head>
-
 <main class="mt-12 md:mt-32">
 	<Hero />
-	<div class="posts md:w-[700px] w-full mx-auto mt-24 flex flex-col">
+	<div class="posts w-full mx-auto mt-52 flex flex-col">
+		<div class="post-block-header font-avenir border-b border-neutral-300 pb-4">
+			<h2 class="text-xl">Posts</h2>
+		</div>
 		{#each posts as { title, slug, excerpt, categories, date }}
 			<Post {slug} {categories} {date} {title} {excerpt} />
 		{/each}

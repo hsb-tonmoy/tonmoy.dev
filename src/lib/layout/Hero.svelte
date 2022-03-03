@@ -63,7 +63,7 @@
 				</div>
 				<a
 					href="#"
-					class="person_info block absolute right-0 md:right-[5%] bottom-10 md:bottom-[50px] w-12 h-12 md:w-[60px] md:h-[60px] bg-black rounded-full text-white z-30 cursor-pointer"
+					class="person_info block absolute right-0 md:right-[5%] bottom-10 md:bottom-[50px] w-12 h-12 md:w-[60px] md:h-[60px] bg-black dark:bg-gray-300 rounded-full text-white z-30 cursor-pointer"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +71,7 @@
 						version="1.1"
 						viewBox="0 0 512 512"
 						enableBackground="new 0 0 512 512"
-						class="fill-white absolute w-4 h-4 md:w-5 md:h-5 left-2/4 top-2/4 -mt-[8px] -ml-[8px] md:-mt-[10px] md:-ml-[10px]"
+						class="fill-white dark:fill-black absolute w-4 h-4 md:w-5 md:h-5 left-2/4 top-2/4 -mt-[8px] -ml-[8px] md:-mt-[10px] md:-ml-[10px]"
 					>
 						<g>
 							<g>

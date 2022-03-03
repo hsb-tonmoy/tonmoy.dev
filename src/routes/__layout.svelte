@@ -3,8 +3,12 @@
 	import Nav from '$lib/layout/Nav.svelte';
 </script>
 
+<svelte:head>
+	<title>Hasibuzzaman Tonmoy - Tech Enthusiast</title>
+</svelte:head>
+
 <div
-	class="max-w-[1170px] w-full px-10 xl:px-0 flex flex-col mx-auto text-textColor dark:text-textColorDark"
+	class="font-avenir max-w-[1170px] w-full px-10 xl:px-0 flex flex-col mx-auto text-textColor dark:text-textColorDark"
 >
 	<Nav />
 	<slot />
