@@ -16,9 +16,8 @@
 		<a href="/">Tonmoy.</a>
 	</div>
 	<nav class="md:flex hidden items-center gap-x-8 text-base font-medium">
-		<a href="/" class="active">Home</a>
+		<a href="/projects" class="">Projects</a>
 		<a href="/about" class="">About Me</a>
-		<a href="/portfolio" class="">Portfolio</a>
 		<a href="/contact" class="">Contact Me</a>
 		<div id="buttons" class="flex items-center gap-x-4 pb-[6px]">
 			{#if dark}
