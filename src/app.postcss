@@ -1,0 +1,27 @@
+/*place global styles here */
+@font-face {
+	/* Reference name */
+	font-family: 'Inter';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+:root {
+	--theme-font-family-base: 'Inter', sans-serif;
+	--theme-font-family-heading: 'Inter', sans-serif;
+	--color-surface-50: 221 221 221; /* ⬅ #dddddd */
+	--color-surface-100: 210 210 210; /* ⬅ #d2d2d2 */
+	--color-surface-200: 199 199 199; /* ⬅ #c7c7c7 */
+	--color-surface-300: 165 165 165; /* ⬅ #a5a5a5 */
+	--color-surface-400: 98 98 98; /* ⬅ #626262 */
+	--color-surface-500: 31 31 31; /* ⬅ #1F1F1F */
+	--color-surface-600: 31 31 31; /* ⬅ #1c1c1c */
+	--color-surface-700: 31 31 31; /* ⬅ #171717 */
+	--color-surface-800: 31 31 31; /* ⬅ #131313 */
+	--color-surface-900: 31 31 31; /* ⬅ #0f0f0f */
+}
+
+html,
+body {
+	@apply h-full bg-surface-50-900-token overflow-hidden;
+}
