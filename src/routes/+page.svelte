@@ -1,13 +1,18 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script>
+	import Home from '$lib/icons/Home.svelte';
+</script>
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout, the CSS import order is critical!</li>
-			<li><code class="code">/src/app.postcss</code> - minimal css to make the page full screen, may not be relevant for your project</li>
-			<li><code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents</li>
-		</ul>
+<div class="container w-full xl:w-auto xl:max-w-3xl h-full mx-auto flex">
+	<div class="flex flex-col">
+		<button class="btn btn-md variant-ringed-surface text-white uppercase text-xs w-fit mb-14"
+			><span class="w-4 h-4"><Home /></span> <span>Introduction</span></button
+		>
+		<h2 class="text-white text-7xl leading-[1.15] font-light">
+			Hi from <span class="text-primary-500">Tonmoy</span>,<br /> Software and<br /> Full-stack Developer
+		</h2>
+		<span class="text-textColor mt-12"
+			>In the world of web development, I find my joy. I'm Hasibuzzaman Tonmoy, designing simplicity
+			and coding innovation.</span
+		>
 	</div>
 </div>

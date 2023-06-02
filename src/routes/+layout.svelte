@@ -11,15 +11,20 @@
 </script>
 
 <AppShell
-	slotSidebarLeft="w-auto flex items-center ml-6 my-20"
-	slotSidebarRight="w-auto flex items-center mr-20"
+	regionPage="py-20"
+	slotSidebarLeft="xl:w-auto w-full flex items-start xl:items-center px-6 py-4 xl:py-20"
+	slotSidebarRight="w-auto flex items-center mr-20 py-20"
 >
 	<!-- (header) -->
 	<svelte:fragment slot="sidebarLeft"
-		><div class="border-[0.5px] border-gray-500 rounded-xl h-full px-10 py-12">
+		><div
+			class="w-full xl:w-auto border-[0.5px] border-surface-500 rounded-3xl xl:h-full px-6 md:px-10 py-12"
+		>
 			<LeftSidebar />
 		</div></svelte:fragment
 	>
-	<svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment>
+	<svelte:fragment slot="sidebarRight"
+		><div class="hidden xl:flex">Sidebar Right</div></svelte:fragment
+	>
 	<slot />
 </AppShell>
