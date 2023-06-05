@@ -6,25 +6,22 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 
-	import { AppShell } from '@skeletonlabs/skeleton';
 	import LeftSidebar from '$lib/components/layout/LeftSidebar.svelte';
 </script>
 
-<AppShell
-	regionPage="py-20"
-	slotSidebarLeft="xl:w-auto w-full flex items-start xl:items-center px-6 py-4 xl:py-20"
-	slotSidebarRight="w-auto flex items-center mr-20 py-20"
->
-	<!-- (header) -->
-	<svelte:fragment slot="sidebarLeft"
-		><div
-			class="w-full xl:w-auto border-[0.5px] border-surface-500 rounded-3xl xl:h-full px-6 md:px-10 py-12"
-		>
+<div class="w-full h-full flex">
+	<aside
+		id="leftSidebar"
+		class="xl:w-auto w-full flex items-start xl:items-center px-6 py-4 xl:py-20"
+	>
+		<div class="w-full border-[0.5px] border-surface-500 rounded-3xl xl:h-full px-6 md:px-10 py-12">
 			<LeftSidebar />
-		</div></svelte:fragment
-	>
-	<svelte:fragment slot="sidebarRight"
-		><div class="hidden xl:flex">Sidebar Right</div></svelte:fragment
-	>
-	<slot />
-</AppShell>
+		</div>
+	</aside>
+	<main class="w-full h-full flex overflow-hidden py-20">
+		<slot />
+	</main>
+	<aside id="rightMenu" class="flex-none overflow-x-hidden overflow-y-auto">
+		<div class="hidden xl:flex w-auto items-center mr-20 py-20">Sidebar Right</div>
+	</aside>
+</div>

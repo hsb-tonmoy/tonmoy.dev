@@ -10,9 +10,11 @@
 		<h2 class="text-white text-7xl leading-[1.15] font-light">
 			Hi from <span class="text-primary-500">Tonmoy</span>,<br /> Software and<br /> Full-stack Developer
 		</h2>
-		<span class="text-textColor mt-12"
-			>In the world of web development, I find my joy. I'm Hasibuzzaman Tonmoy, designing simplicity
-			and coding innovation.</span
-		>
+		<div class="max-w-lg mt-12">
+			<span class="text-textColor"
+				>In the world of web development, I find my joy. I'm Hasibuzzaman Tonmoy, designing
+				simplicity and coding innovation.</span
+			>
+		</div>
 	</div>
 </div>
