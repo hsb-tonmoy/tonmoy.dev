@@ -1,6 +1,7 @@
 <script>
 	import TitleChip from '$lib/components/layout/TitleChip.svelte';
 	import Resume from '$lib/icons/Resume.svelte';
+	import Download from '$lib/icons/Download.svelte';
 </script>
 
 <div class="flex flex-col py-20">
@@ -67,6 +68,14 @@
 			>
 		</li>
 	</ol>
+	<div class="mt-8">
+		<a href="/resume/Hasibuzzaman_Tonmoy_Resume.pdf">
+			<button type="button" class="btn btn-lg variant-filled-primary hover:variant-ghost-primary">
+				<span class="w-5 h-5"><Download /></span>
+				<span class="">My Resume</span>
+			</button>
+		</a>
+	</div>
 </div>
 
 <style lang="postcss">

@@ -1,21 +1,23 @@
 <script>
 	import Home from '$lib/icons/Home.svelte';
+	import User from '$lib/icons/User.svelte';
+	import Resume from '$lib/icons/Resume.svelte';
 
 	const menuItems = [
 		{
 			name: 'Home',
 			icon: Home,
-			link: '#home'
+			link: '#introduction'
 		},
 		{
 			name: 'About',
-			icon: Home,
+			icon: User,
 			link: '#about'
 		},
 		{
-			name: 'Contact',
-			icon: Home,
-			link: '#contact'
+			name: 'Resume',
+			icon: Resume,
+			link: '#resume'
 		}
 	];
 </script>
