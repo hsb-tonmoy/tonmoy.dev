@@ -8,12 +8,13 @@
 
 	import LeftSidebar from '$lib/components/layout/LeftSidebar.svelte';
 	import Menu from '$lib/icons/Menu.svelte';
+	import FloatingMenu from '$lib/components/layout/FloatingMenu.svelte';
 </script>
 
 <div class="relative w-full min-h-screen flex flex-col xl:flex-row bg-surface-600 p-4 xl:p-0">
 	<aside
 		id="leftSidebar"
-		class="xl:sticky h-full top-20 bottom-20 left-6 flex-none xl:w-auto w-full flex items-start xl:items-center"
+		class="xl:sticky h-full top-40 bottom-20 left-6 flex-none xl:w-auto w-full flex items-start xl:items-center"
 	>
 		<div class="w-full border-[0.5px] border-surface-500 rounded-3xl xl:h-full px-6 md:px-10 py-12">
 			<LeftSidebar />
@@ -33,35 +34,20 @@
 				<Menu />
 			</span>
 		</button>
-		<div class="hidden xl:flex">
+		<div id="floatingMenu" class="hidden fixed xl:flex">
 			<div
 				class="flex flex-col gap-4 justify-center border-[0.5px] border-surface-500 rounded-full h-full p-4 text-white"
 			>
-				<span class="w-5 h-5">
-					<Menu />
-				</span>
-				<span class="w-5 h-5">
-					<Menu />
-				</span>
-				<span class="w-5 h-5">
-					<Menu />
-				</span>
-				<span class="w-5 h-5">
-					<Menu />
-				</span>
-				<span class="w-5 h-5">
-					<Menu />
-				</span>
-				<span class="w-5 h-5">
-					<Menu />
-				</span>
-				<span class="w-5 h-5">
-					<Menu />
-				</span>
-				<span class="w-5 h-5">
-					<Menu />
-				</span>
+				<FloatingMenu />
 			</div>
 		</div>
 	</aside>
 </div>
+
+<style lang="postcss">
+	#floatingMenu {
+		top: 50vh;
+
+		transform: translate(0%, -50%);
+	}
+</style>
