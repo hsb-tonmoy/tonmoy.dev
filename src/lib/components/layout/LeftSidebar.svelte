@@ -42,7 +42,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="flex justify-center items-center mt-16">
+	<div class="flex justify-center items-center mt-10 2xl:mt-16">
 		<button
 			type="button"
 			class="btn btn-lg variant-filled-primary hover:variant-ghost-primary w-full"

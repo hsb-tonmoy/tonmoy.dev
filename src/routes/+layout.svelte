@@ -14,13 +14,13 @@
 <div class="relative w-full min-h-screen flex flex-col xl:flex-row bg-surface-600 p-4 xl:p-0">
 	<aside
 		id="leftSidebar"
-		class="xl:sticky h-full top-40 bottom-20 left-6 flex-none xl:w-auto w-full flex items-start xl:items-center"
+		class="xl:sticky h-full top-20 bottom-20 left-6 xl:mr-6 flex-none xl:w-auto w-full flex items-start xl:items-center"
 	>
 		<div class="w-full border-[0.5px] border-surface-500 rounded-3xl xl:h-full px-6 md:px-10 py-12">
 			<LeftSidebar />
 		</div>
 	</aside>
-	<main class="flex-1 min-w-0 overflow-auto py-20">
+	<main class="flex-1 min-w-0 overflow-auto px-6 py-20">
 		<slot />
 	</main>
 	<aside
