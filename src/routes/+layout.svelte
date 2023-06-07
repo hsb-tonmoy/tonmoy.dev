@@ -11,6 +11,10 @@
 	import FloatingMenu from '$lib/components/layout/FloatingMenu.svelte';
 </script>
 
+<svelte:head>
+	<title>Hasibuzzaman Tonmoy</title>
+</svelte:head>
+
 <div class="relative w-full min-h-screen flex flex-col xl:flex-row bg-surface-600 p-4 xl:p-0">
 	<aside
 		id="leftSidebar"

@@ -18,7 +18,7 @@
 	<div class="w-full flex justify-end items-center mt-16">
 		<CtaButton />
 	</div>
-	<div class="flex items-center gap-10 mt-12 md:mt-20 max-w-sm">
+	<div class="flex items-center gap-10 mt-12 max-w-sm">
 		<div class="flex flex-col gap-4">
 			<span class="text-primary-500 text-4xl md:text-7xl font-light">5+</span>
 			<span class="text-textColor text-sm md:text-base uppercase">Years of Experience</span>

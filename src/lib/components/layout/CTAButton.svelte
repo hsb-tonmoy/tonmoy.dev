@@ -71,9 +71,7 @@
 		animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
 	}
 	.btn::after {
-		@apply bg-primary-500;
-		top: 3rem;
-		left: 13rem;
+		@apply bg-primary-500 top-12 left-32 md:left-48;
 		-webkit-animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite
 			alternate;
 		animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;

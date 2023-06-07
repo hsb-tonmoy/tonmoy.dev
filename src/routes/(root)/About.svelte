@@ -6,7 +6,7 @@
 <div class="flex flex-col py-20">
 	<TitleChip icon={User} title="About" />
 	<h2 class="text-white text-2xl md:text-5xl font-light mb-8">
-		Crafting the Future, One Line of Code at a Time
+		Crafting the Future, One Line of <span class="text-primary-500">Code</span> at a Time
 	</h2>
 	<p class="">
 		Venturing into the expansive world of software and full-stack web development nearly ten years
