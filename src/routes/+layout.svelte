@@ -9,6 +9,15 @@
 	import LeftSidebar from '$lib/components/layout/LeftSidebar.svelte';
 	import Menu from '$lib/icons/Menu.svelte';
 	import FloatingMenu from '$lib/components/layout/FloatingMenu.svelte';
+	import SlidingMenu from '$lib/components/layout/SlidingMenu.svelte';
+
+	let drawer: any;
+	let isDrawerClosed = true;
+
+	const openDrawer = () => {
+		isDrawerClosed = false;
+		drawer.open();
+	};
 </script>
 
 <svelte:head>
@@ -31,13 +40,16 @@
 		id="rightMenu"
 		class="fixed xl:sticky xl:h-screen top-2 right-2 xl:right-16 pt-20 flex-none xl:w-auto w-full flex items-end xl:items-center flex-col"
 	>
-		<button
-			class="border-[0.5px] bg-surface-600 border-surface-500 hover:border-white rounded-full w-14 h-14 p-2 transition-all ease-in-out duration-300"
-		>
-			<span class="text-white">
-				<Menu />
-			</span>
-		</button>
+		{#if isDrawerClosed}
+			<button
+				on:click={openDrawer}
+				class="border-[0.5px] bg-surface-600 border-surface-500 hover:border-white rounded-full w-14 h-14 p-2 transition-all ease-in-out duration-300"
+			>
+				<span class="text-white">
+					<Menu />
+				</span>
+			</button>
+		{/if}
 		<div id="floatingMenu" class="hidden fixed xl:flex">
 			<div
 				class="flex flex-col gap-4 justify-center border-[0.5px] border-surface-500 rounded-full h-full p-4 text-white"
@@ -47,6 +59,7 @@
 		</div>
 	</aside>
 </div>
+<SlidingMenu bind:drawer bind:isDrawerClosed />
 
 <style lang="postcss">
 	#floatingMenu {
