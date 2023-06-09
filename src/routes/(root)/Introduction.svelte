@@ -1,11 +1,12 @@
 <script>
 	import TitleChip from '$lib/components/layout/TitleChip.svelte';
-	import Home from '$lib/icons/Home.svelte';
 	import CtaButton from '$lib/components/layout/CTAButton.svelte';
+	import MaterialSymbolsHome from '~icons/material-symbols/home'
+
 </script>
 
 <div class="flex flex-col">
-	<TitleChip icon={Home} title="Introduction" />
+	<TitleChip icon={MaterialSymbolsHome} title="Introduction" />
 	<h2 class="text-white text-4xl md:text-7xl font-light">
 		Hi from <span class="text-primary-500">Tonmoy</span>,<br /> Software and<br /> Full-stack Developer
 	</h2>

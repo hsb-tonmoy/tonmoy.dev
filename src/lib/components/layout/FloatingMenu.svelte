@@ -1,24 +1,42 @@
 <script>
-	import Home from '$lib/icons/Home.svelte';
-	import User from '$lib/icons/User.svelte';
-	import Resume from '$lib/icons/Resume.svelte';
+	import MaterialSymbolsHome from '~icons/material-symbols/home'
+	import MaterialSymbolsLabProfile from '~icons/material-symbols/lab-profile'
+	import MaterialSymbolsPerson from '~icons/material-symbols/person'
+	import MaterialSymbolsSettingsAccountBox from '~icons/material-symbols/settings-account-box'
+	import PajamasProject from '~icons/pajamas/project'
+	import MaterialSymbolsContactPage from '~icons/material-symbols/contact-page'
 
 	const menuItems = [
 		{
 			name: 'Home',
-			icon: Home,
+			icon: MaterialSymbolsHome,
 			link: '#introduction'
 		},
 		{
 			name: 'About',
-			icon: User,
+			icon: MaterialSymbolsPerson,
 			link: '#about'
 		},
 		{
 			name: 'Resume',
-			icon: Resume,
+			icon: MaterialSymbolsLabProfile,
 			link: '#resume'
-		}
+		},
+		{
+			name: 'Skills',
+			icon: MaterialSymbolsSettingsAccountBox,
+			link: '#skills'
+		},
+		{
+			name: 'Projects',
+			icon: PajamasProject,
+			link: '#projects'
+		},
+		{
+			name: 'Contact',
+			icon: MaterialSymbolsContactPage,
+			link: '#contact'
+		},
 	];
 	export let showNames = false;
 	export let widthClass = 'w-4 h-4';

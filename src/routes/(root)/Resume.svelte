@@ -1,11 +1,11 @@
 <script>
 	import TitleChip from '$lib/components/layout/TitleChip.svelte';
-	import Resume from '$lib/icons/Resume.svelte';
-	import Download from '$lib/icons/Download.svelte';
+	import MaterialSymbolsLabProfile from '~icons/material-symbols/lab-profile'
+	import MaterialSymbolsDownload from '~icons/material-symbols/download'
 </script>
 
 <div class="flex flex-col py-20">
-	<TitleChip icon={Resume} title="Resume" />
+	<TitleChip icon={MaterialSymbolsLabProfile} title="Resume" />
 	<h2 class="text-white text-2xl md:text-5xl font-light mb-16">
 		Work <span class="text-primary-500">Experiences</span>
 	</h2>
@@ -71,7 +71,7 @@
 	<div class="mt-8">
 		<a href="/resume/Hasibuzzaman_Tonmoy_Resume.pdf">
 			<button type="button" class="btn btn-lg variant-filled-primary hover:variant-ghost-primary">
-				<span class="w-5 h-5"><Download /></span>
+				<span class="w-5 h-5"><MaterialSymbolsDownload /></span>
 				<span class="">My Resume</span>
 			</button>
 		</a>

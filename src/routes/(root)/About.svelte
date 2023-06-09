@@ -1,10 +1,11 @@
 <script>
 	import TitleChip from '$lib/components/layout/TitleChip.svelte';
-	import User from '$lib/icons/User.svelte';
+	import MaterialSymbolsPerson from '~icons/material-symbols/person'
+
 </script>
 
 <div class="flex flex-col py-20">
-	<TitleChip icon={User} title="About" />
+	<TitleChip icon={MaterialSymbolsPerson} title="About" />
 	<h2 class="text-white text-2xl md:text-5xl font-light mb-8">
 		Crafting the Future, One Line of <span class="text-primary-500">Code</span> at a Time
 	</h2>
