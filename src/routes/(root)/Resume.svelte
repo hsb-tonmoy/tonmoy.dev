@@ -1,10 +1,28 @@
-<script>
+<script lang='ts'>
+	import { inview } from 'svelte-inview';
+  import type { ObserverEventDetails, ScrollDirection, Options } from 'svelte-inview';
+
+  let isInView: boolean;
+  let scrollDirection: ScrollDirection;
+  const options: Options = {
+    rootMargin: '-20px',
+    unobserveOnEnter: true,
+  };
+
+  const handleChange = ({ detail }: CustomEvent<ObserverEventDetails>) => {
+    isInView = detail.inView;
+    scrollDirection = detail.scrollDirection.vertical;
+  };
+
 	import TitleChip from '$lib/components/layout/TitleChip.svelte';
 	import MaterialSymbolsLabProfile from '~icons/material-symbols/lab-profile'
 	import MaterialSymbolsDownload from '~icons/material-symbols/download'
 </script>
 
-<div class="flex flex-col py-20">
+
+<div use:inview={options} on:inview_change={handleChange} class:animate__animated={isInView} 
+class:animate__fadeInDown={scrollDirection === 'down'}
+class:animate__fadeInUp={scrollDirection === 'up'} class="flex flex-col py-20">
 	<TitleChip icon={MaterialSymbolsLabProfile} title="Resume" />
 	<h2 class="text-white text-2xl md:text-5xl font-light mb-16">
 		Work <span class="text-primary-500">Experiences</span>

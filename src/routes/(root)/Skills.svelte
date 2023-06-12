@@ -15,11 +15,11 @@
   };
 
 	import TitleChip from '$lib/components/layout/TitleChip.svelte';
-	import MaterialSymbolsPerson from '~icons/material-symbols/person'
+	import MaterialSymbolsSettingsAccountBox from '~icons/material-symbols/settings-account-box'
 
 </script>
 
-<div use:inview={options} on:inview_change={handleChange}  class:animate__animated={isInView} 
+<div use:inview={options} on:inview_change={handleChange} class:animate__animated={isInView} 
 class:animate__fadeInDown={scrollDirection === 'down'}
 class:animate__fadeInUp={scrollDirection === 'up'} class="flex flex-col py-20">
 	<TitleChip icon={MaterialSymbolsPerson} title="About" />
@@ -43,14 +43,3 @@ class:animate__fadeInUp={scrollDirection === 'up'} class="flex flex-col py-20">
 		programming task at a time.
 	</p>
 </div>
-
-<style lang="postcss">
-	h2 {
-		line-height: 1.15 !important;
-	}
-
-	p {
-		@apply text-textColor text-sm md:text-base;
-		line-height: 1.875 !important;
-	}
-</style>
