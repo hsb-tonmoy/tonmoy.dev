@@ -40,19 +40,17 @@
 		id="rightMenu"
 		class="fixed xl:sticky xl:h-screen top-2 right-2 xl:right-16 pt-20 flex-none xl:w-auto w-full flex items-end xl:items-center flex-col"
 	>
-		{#if isDrawerClosed}
-			<button
-				on:click={openDrawer}
-				class="border-[0.5px] bg-surface-600 border-surface-500 hover:border-white rounded-full w-14 h-14 p-2 transition-all ease-in-out duration-300"
-			>
-				<span class="text-white">
-					<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-	><path d="M160-390v-60h640v60H160Zm0-120v-60h640v60H160Z" /></svg
->
+		<button
+			on:click={openDrawer}
+			class="border-[0.5px] bg-surface-600 border-surface-500 hover:border-white rounded-full w-14 h-14 p-2 transition-all ease-in-out duration-300"
+		>
+			<span class="text-white">
+				<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+					><path d="M160-390v-60h640v60H160Zm0-120v-60h640v60H160Z" /></svg
+				>
+			</span>
+		</button>
 
-				</span>
-			</button>
-		{/if}
 		<div id="floatingMenu" class="hidden fixed xl:flex">
 			<div
 				class="flex flex-col gap-4 justify-center border-[0.5px] border-surface-500 rounded-full h-full p-4 text-white"
