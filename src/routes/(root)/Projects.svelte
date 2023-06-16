@@ -4,6 +4,8 @@
 	import { filter, GreenFall } from '@skeletonlabs/skeleton';
 </script>
 
+<GreenFall />
+
 <div class="flex flex-col py-20">
 	<TitleChip icon={PajamasProject} title="Projects" />
 	<h2 class="text-white text-2xl md:text-5xl font-light mb-8">
@@ -16,9 +18,7 @@
 		class="object-cover max-w-2xl w-full rounded-3xl mb-6"
 	/>
 	<a href="/">
-		<h6
-			class="font-light text-white text-lg md:text-xl tracking-wide hover:underline transition-all ease-in-out duration-300"
-		>
+		<h6 class="font-light text-white text-lg md:text-xl tracking-wide hover:underline">
 			app.aemers - College Application Tracker
 		</h6>
 	</a>
