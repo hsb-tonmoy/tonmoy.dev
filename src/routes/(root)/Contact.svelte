@@ -57,7 +57,11 @@
 			<section
 				class="flex flex-col md:grid md:grid-cols-2 gap-y-6 gap-x-6 md:gap-y-12 mt-16 w-full"
 			>
-				<div class="">
+				<div
+					class:animate__slideInRight={intersecting}
+					style="--animate-duration: 0.5s;"
+					class="animate__animated"
+				>
 					<label for="name">Name <sup class="text-primary-500">*</sup></label>
 					<input
 						type="text"
@@ -69,7 +73,11 @@
 					/>
 					{#if $errors.name}<span class="invalid">{$errors.name}</span>{/if}
 				</div>
-				<div class="">
+				<div
+					class:animate__slideInRight={intersecting}
+					style="--animate-duration: 0.8s;"
+					class="animate__animated"
+				>
 					<label for="email">E-mail <sup class="text-primary-500">*</sup></label>
 					<input
 						type="email"
@@ -81,7 +89,11 @@
 					/>
 					{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
 				</div>
-				<div class="">
+				<div
+					class:animate__slideInRight={intersecting}
+					style="--animate-duration: 1.1s;"
+					class="animate__animated"
+				>
 					<label for="phone">Phone</label>
 					<input
 						type="phone"
@@ -93,7 +105,11 @@
 					/>
 					{#if $errors.phone}<span class="invalid">{$errors.phone}</span>{/if}
 				</div>
-				<div class="">
+				<div
+					class:animate__slideInRight={intersecting}
+					style="--animate-duration: 1.4s;"
+					class="animate__animated"
+				>
 					<label for="subject">Subject <sup class="text-primary-500">*</sup></label>
 					<input
 						type="subject"
@@ -105,7 +121,11 @@
 					/>
 					{#if $errors.subject}<span class="invalid">{$errors.subject}</span>{/if}
 				</div>
-				<div class="col-span-2">
+				<div
+					class:animate__slideInUp={intersecting}
+					style="--animate-duration: 1.7s;"
+					class="animate__animated col-span-2"
+				>
 					<label for="message">Message <sup class="text-primary-500">*</sup></label>
 					<textarea
 						name="message"
@@ -118,9 +138,11 @@
 					{#if $errors.message}<span class="invalid">{$errors.message}</span>{/if}
 				</div>
 				<button
+					class:animate__slideInUp={intersecting}
+					style="--animate-duration: 2s;"
 					disabled={$delayed}
 					type="submit"
-					class="btn btn-lg variant-filled-primary hover:variant-ghost-primary inline-flex items-center w-full"
+					class="animate__animated btn btn-lg variant-filled-primary hover:variant-ghost-primary inline-flex items-center w-full"
 					><span>Send</span>{#if $delayed}<span class="w-4 h-4 block"><Spinner /></span
 						>{/if}</button
 				>

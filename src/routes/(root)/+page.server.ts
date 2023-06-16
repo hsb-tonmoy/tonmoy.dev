@@ -39,8 +39,10 @@ export const actions = {
 			to: TO_EMAIL,
 			from: 'hello@tonmoy.dev',
 			subject: form.data.subject,
-			text: `Message from: ${form.data.name} - ${form.data.message}`,
-			html: `Message from: <strong>${form.data.name}</strong> <br /> ${form.data.message}`
+			text: `Message from: ${form.data.name} (${form.data.phone && form.data.phone}) - ${
+				form.data.message
+			}`,
+			html: `Message from: <strong>${form.data.name}</strong><br />Phone: <strong>${form.data.phone}</strong><br />${form.data.message}`
 		};
 
 		try {
