@@ -2,7 +2,10 @@ import { z } from 'zod';
 import { superValidate, message } from 'sveltekit-superforms/server';
 
 import sgMail from '@sendgrid/mail';
-sgMail.setApiKey(import.meta.env.VITE_SENDGRID_API_KEY);
+const SENDGRID_API_KEY: string = import.meta.env.VITE_SENDGRID_API_KEY;
+const TO_EMAIL: string = import.meta.env.VITE_TO_EMAIL;
+
+sgMail.setApiKey(SENDGRID_API_KEY);
 
 const schema = z.object({
 	name: z.string().min(2, 'Name must be at least 2 characters long'),
@@ -33,8 +36,8 @@ export const actions = {
 		}
 
 		const msg = {
-			to: 'hello@tonmoy.dev',
-			from: form.data.email,
+			to: TO_EMAIL,
+			from: 'hello@tonmoy.dev',
 			subject: form.data.subject,
 			text: `Message from: ${form.data.name} - ${form.data.message}`,
 			html: `Message from: <strong>${form.data.name}</strong> <br /> ${form.data.message}`
