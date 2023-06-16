@@ -1,16 +1,16 @@
 import { z } from 'zod';
-import { superValidate } from 'sveltekit-superforms/server';
+import { superValidate, message } from 'sveltekit-superforms/server';
 import { fail } from '@sveltejs/kit';
 
 const schema = z.object({
-	name: z.string(),
+	name: z.string().min(2, 'Name must be at least 2 characters long'),
 	email: z.string().email(),
 	phone: z
 		.string()
 
 		.optional(),
-	subject: z.string(),
-	message: z.string()
+	subject: z.string().min(5, 'Subject must be at least 5 characters long'),
+	message: z.string().min(10, 'Message must be at least 10 characters long')
 });
 
 export const load = async () => {
@@ -22,14 +22,14 @@ export const load = async () => {
 export const actions = {
 	default: async ({ request }) => {
 		const form = await superValidate(request, schema);
-		console.log('POST', form);
 
 		if (!form.valid) {
-			return fail(400, { form });
+			console.log('POST', form);
+			return message(form, 'fail', {
+				status: 403
+			});
 		}
 
-		// TODO: Do something with the validated data
-
-		return { form };
+		return message(form, 'success');
 	}
 };
