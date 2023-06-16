@@ -1,6 +1,8 @@
 import { z } from 'zod';
 import { superValidate, message } from 'sveltekit-superforms/server';
-import { fail } from '@sveltejs/kit';
+
+import sgMail from '@sendgrid/mail';
+sgMail.setApiKey(import.meta.env.VITE_SENDGRID_API_KEY);
 
 const schema = z.object({
 	name: z.string().min(2, 'Name must be at least 2 characters long'),
@@ -27,6 +29,23 @@ export const actions = {
 			console.log('POST', form);
 			return message(form, 'fail', {
 				status: 403
+			});
+		}
+
+		const msg = {
+			to: 'hello@tonmoy.dev',
+			from: form.data.email,
+			subject: form.data.subject,
+			text: `Message from: ${form.data.name} - ${form.data.message}`,
+			html: `Message from: <strong>${form.data.name}</strong> <br /> ${form.data.message}`
+		};
+
+		try {
+			await sgMail.send(msg);
+		} catch (error) {
+			console.error(error);
+			return message(form, 'fail', {
+				status: 400
 			});
 		}
 

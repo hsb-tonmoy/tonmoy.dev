@@ -45,6 +45,7 @@
 	"type": "module",
 	"dependencies": {
 		"@rodneylab/svelte-social-icons": "^0.0.25",
+		"@sendgrid/mail": "^7.7.0",
 		"animate.css": "^4.1.1"
 	}
 }
