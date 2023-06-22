@@ -14,14 +14,14 @@
 		<h2
 			bind:this={element}
 			class:animate__slideInUp={intersecting}
-			style="--animate-delay: 0.5s;"
+			style="--animate-delay: 0.3s;"
 			class="animate__animated text-white text-2xl md:text-5xl font-light mb-16"
 		>
 			Work <span class="text-primary-500">Experiences</span>
 		</h2>
 		<ol
 			class:animate__slideInRight={intersecting}
-			style="--animate-duration: 2.5s;"
+			style="--animate-duration: 1.5s;"
 			class="animate__animated relative border-l border-surface-500 ml-4"
 		>
 			<li class="group mb-10 ml-10 md:ml-16">
@@ -84,7 +84,7 @@
 		</ol>
 		<div
 			class:animate__slideInLeft={intersecting}
-			style="--animate-delay: 1.5s; --animate-duration: 2.5s;"
+			style="--animate-delay: 0.8s; --animate-duration: 1.5s;"
 			class="animate__animated mt-8"
 		>
 			<a href="/resume/Hasibuzzaman_Tonmoy_Resume.pdf">

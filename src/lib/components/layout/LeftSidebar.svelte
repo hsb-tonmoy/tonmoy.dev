@@ -1,4 +1,5 @@
 <script>
+	import { scrollto } from 'svelte-scrollto-element';
 	import Socials from './Socials.svelte';
 </script>
 
@@ -26,6 +27,7 @@
 	<Socials />
 	<div class="flex justify-center items-center mt-4">
 		<button
+			use:scrollto={`#contact`}
 			type="button"
 			class="btn btn-lg variant-filled-primary hover:variant-ghost-primary w-full"
 		>
