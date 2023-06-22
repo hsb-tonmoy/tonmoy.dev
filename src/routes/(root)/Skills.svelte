@@ -54,7 +54,7 @@
 </script>
 
 <IntersectionObserver {element} bind:intersecting threshold={0.9}>
-	<div class="flex flex-col py-20">
+	<section id="skills" class="flex flex-col py-20">
 		<TitleChip icon={MaterialSymbolsSettingsAccountBox} title="Skills" />
 		<h2
 			class:animate__slideInUp={intersecting}
@@ -78,7 +78,7 @@
 				</button>
 			{/each}
 		</div>
-	</div>
+	</section>
 </IntersectionObserver>
 
 <style>

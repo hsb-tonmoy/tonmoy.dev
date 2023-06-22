@@ -6,7 +6,7 @@
 
 <GreenFall />
 
-<div class="flex flex-col py-20">
+<section id="projects" class="flex flex-col py-20">
 	<TitleChip icon={PajamasProject} title="Projects" />
 	<h2 class="text-white text-2xl md:text-5xl font-light mb-8">
 		My <span class="text-primary-500">Projects</span>
@@ -22,4 +22,4 @@
 			app.aemers - College Application Tracker
 		</h6>
 	</a>
-</div>
+</section>

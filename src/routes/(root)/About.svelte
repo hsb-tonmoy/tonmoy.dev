@@ -8,7 +8,7 @@
 </script>
 
 <IntersectionObserver {element} bind:intersecting threshold={0.9}>
-	<div class="flex flex-col py-20">
+	<section id="about" class="flex flex-col py-20">
 		<TitleChip icon={MaterialSymbolsPerson} title="About" />
 		<h2
 			bind:this={element}
@@ -43,7 +43,7 @@
 			is the ultimate sophistication, and my goal is to make this digital world a bit more
 			navigable, one programming task at a time.
 		</p>
-	</div>
+	</section>
 </IntersectionObserver>
 
 <style lang="postcss">

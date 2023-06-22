@@ -9,7 +9,7 @@
 </script>
 
 <IntersectionObserver {element} bind:intersecting threshold={0.9}>
-	<div class="flex flex-col py-20">
+	<section id="resume" class="flex flex-col py-20">
 		<TitleChip icon={MaterialSymbolsLabProfile} title="Resume" />
 		<h2
 			bind:this={element}
@@ -94,7 +94,7 @@
 				</button>
 			</a>
 		</div>
-	</div>
+	</section>
 </IntersectionObserver>
 
 <style lang="postcss">

@@ -1,50 +1,60 @@
 <script>
-	import MaterialSymbolsHome from '~icons/material-symbols/home'
-	import MaterialSymbolsLabProfile from '~icons/material-symbols/lab-profile'
-	import MaterialSymbolsPerson from '~icons/material-symbols/person'
-	import MaterialSymbolsSettingsAccountBox from '~icons/material-symbols/settings-account-box'
-	import PajamasProject from '~icons/pajamas/project'
-	import MaterialSymbolsContactPage from '~icons/material-symbols/contact-page'
+	import { scrollto } from 'svelte-scrollto-element';
+	import { currentSection } from './stores';
+	import MaterialSymbolsHome from '~icons/material-symbols/home';
+	import MaterialSymbolsLabProfile from '~icons/material-symbols/lab-profile';
+	import MaterialSymbolsPerson from '~icons/material-symbols/person';
+	import MaterialSymbolsSettingsAccountBox from '~icons/material-symbols/settings-account-box';
+	import PajamasProject from '~icons/pajamas/project';
+	import MaterialSymbolsContactPage from '~icons/material-symbols/contact-page';
 
 	const menuItems = [
 		{
 			name: 'Home',
 			icon: MaterialSymbolsHome,
-			link: '#introduction'
+			link: 'introduction'
 		},
 		{
 			name: 'About',
 			icon: MaterialSymbolsPerson,
-			link: '#about'
+			link: 'about'
 		},
 		{
 			name: 'Resume',
 			icon: MaterialSymbolsLabProfile,
-			link: '#resume'
+			link: 'resume'
 		},
 		{
 			name: 'Skills',
 			icon: MaterialSymbolsSettingsAccountBox,
-			link: '#skills'
+			link: 'skills'
 		},
 		{
 			name: 'Projects',
 			icon: PajamasProject,
-			link: '#projects'
+			link: 'projects'
 		},
 		{
 			name: 'Contact',
 			icon: MaterialSymbolsContactPage,
-			link: '#contact'
-		},
+			link: 'contact'
+		}
 	];
 	export let showNames = false;
 	export let widthClass = 'w-4 h-4';
 </script>
 
 {#each menuItems as menu}
-	<span class="text-textColor hover:text-white transition-all ease-in-out duration-300">
-		<a href={menu.link} class="inline-flex items-center gap-2"
+	<span
+		class="{$currentSection === menu.link
+			? 'text-white'
+			: 'text-textColor'} hover:text-white transition-all ease-in-out duration-300"
+	>
+		<a
+			href={menu.link}
+			on:click={() => ($currentSection = menu.link)}
+			use:scrollto={`#${menu.link}`}
+			class="inline-flex items-center gap-2"
 			><span class="block {widthClass}">
 				<svelte:component this={menu.icon} />
 			</span>

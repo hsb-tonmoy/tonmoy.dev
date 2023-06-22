@@ -9,7 +9,7 @@
 </script>
 
 <IntersectionObserver {element} bind:intersecting threshold={0.9}>
-	<div class="flex flex-col">
+	<section id="introduction" class="flex flex-col">
 		<TitleChip icon={MaterialSymbolsHome} title="Introduction" />
 		<h2 class="text-white text-4xl md:text-7xl font-light">
 			Hi from <span class="text-primary-500">Tonmoy</span>,<br /> Software and<br /> Full-stack Developer
@@ -54,7 +54,7 @@
 				>
 			</div>
 		</div>
-	</div>
+	</section>
 </IntersectionObserver>
 
 <style lang="postcss">

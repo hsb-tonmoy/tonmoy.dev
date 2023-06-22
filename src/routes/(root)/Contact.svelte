@@ -43,7 +43,7 @@
 
 <Toast duration={500} rounded="rounded-2xl" buttonDismiss="hidden" />
 <IntersectionObserver {element} bind:intersecting threshold={0.9}>
-	<div class="flex flex-col py-20">
+	<section id="contact" class="flex flex-col py-20">
 		<TitleChip icon={MaterialSymbolsContactPage} title="Contact" />
 		<h2
 			bind:this={element}
@@ -148,7 +148,7 @@
 				>
 			</section>
 		</form>
-	</div>
+	</section>
 </IntersectionObserver>
 
 <style lang="postcss">
