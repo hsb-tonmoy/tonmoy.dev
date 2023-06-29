@@ -25,6 +25,8 @@
 	import Linux from '$lib/components/icons/Linux.svelte';
 	import WordPress from '$lib/components/icons/WordPress.svelte';
 
+	import { currentSection } from '$lib/components/layout/stores';
+
 	const skills = [
 		{ name: 'JavaScript', icon: VscodeIconsFileTypeJs },
 		{ name: 'Typescript', icon: VscodeIconsFileTypeTypescriptOfficial },
@@ -51,6 +53,8 @@
 
 	let element: any;
 	let intersecting: any;
+
+	$: intersecting ? currentSection.set('skills') : null;
 </script>
 
 <IntersectionObserver {element} bind:intersecting threshold={0.9}>

@@ -3,11 +3,15 @@
 	import TitleChip from '$lib/components/layout/TitleChip.svelte';
 	import MaterialSymbolsPerson from '~icons/material-symbols/person';
 
+	import { currentSection } from '$lib/components/layout/stores';
+
 	let element: any;
 	let intersecting: any;
+
+	$: intersecting ? currentSection.set('about') : null;
 </script>
 
-<IntersectionObserver {element} bind:intersecting threshold={0.9}>
+<IntersectionObserver {element} bind:intersecting threshold={0.1}>
 	<section id="about" class="flex flex-col py-20">
 		<TitleChip icon={MaterialSymbolsPerson} title="About" />
 		<h2

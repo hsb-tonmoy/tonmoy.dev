@@ -8,8 +8,12 @@
 	import type { ToastSettings } from '@skeletonlabs/skeleton';
 	import Spinner from '$lib/components/icons/Spinner.svelte';
 
+	import { currentSection } from '$lib/components/layout/stores';
+
 	let element: any;
 	let intersecting: any;
+
+	$: intersecting ? currentSection.set('contact') : null;
 
 	export let data: any;
 

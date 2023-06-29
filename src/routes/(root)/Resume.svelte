@@ -4,8 +4,12 @@
 	import MaterialSymbolsLabProfile from '~icons/material-symbols/lab-profile';
 	import MaterialSymbolsDownload from '~icons/material-symbols/download';
 
+	import { currentSection } from '$lib/components/layout/stores';
+
 	let element: any;
 	let intersecting: any;
+
+	$: intersecting ? currentSection.set('resume') : null;
 </script>
 
 <IntersectionObserver {element} bind:intersecting threshold={0.9}>

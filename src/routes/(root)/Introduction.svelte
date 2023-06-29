@@ -4,8 +4,11 @@
 	import CtaButton from '$lib/components/layout/CTAButton.svelte';
 	import MaterialSymbolsHome from '~icons/material-symbols/home';
 
+	import { currentSection } from '$lib/components/layout/stores';
 	let element: any;
 	let intersecting: any;
+
+	$: intersecting ? currentSection.set('introduction') : null;
 </script>
 
 <IntersectionObserver {element} bind:intersecting threshold={0.9}>
