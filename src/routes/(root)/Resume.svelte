@@ -12,7 +12,7 @@
 	$: intersecting ? currentSection.set('resume') : null;
 </script>
 
-<IntersectionObserver {element} bind:intersecting threshold={0.9}>
+<IntersectionObserver {element} bind:intersecting rootMargin="30%">
 	<section id="resume" class="flex flex-col py-20">
 		<TitleChip icon={MaterialSymbolsLabProfile} title="Resume" />
 		<h2
