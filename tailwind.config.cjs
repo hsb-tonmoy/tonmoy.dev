@@ -14,6 +14,9 @@ module.exports = {
 		extend: {
 			colors: {
 				textColor: 'var(--textColor)'
+			},
+			screens: {
+				'3xl': '2000px'
 			}
 		}
 	},

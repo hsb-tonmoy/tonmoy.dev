@@ -17,7 +17,7 @@
 		</div>
 	</div>
 	<div class="flex justify-center">
-		<img src="/images/headshot.jpg" alt="Headshot" class="w-72 object-cover rounded-xl" />
+		<img src="/images/headshot.jpg" alt="Headshot" class="w-80 3xl:w-96 object-cover rounded-xl" />
 	</div>
 	<div class="flex flex-col gap-2 mt-4 text-white text-center font-light">
 		<a href="tel:+12692701840"><span class="text-xl">+1 (269) 270 1840</span></a>
@@ -25,7 +25,7 @@
 	</div>
 	<div class="text-textColor text-sm text-center">&copy; 2023 Tonmoy. All Rights Reserved</div>
 	<Socials />
-	<div class="flex justify-center items-center mt-4">
+	<div class="flex justify-center items-center mt-4 3xl:mt-20">
 		<button
 			use:scrollto={`#contact`}
 			type="button"

@@ -24,21 +24,23 @@
 	<title>Hasibuzzaman Tonmoy</title>
 </svelte:head>
 
-<div class="relative w-full min-h-screen flex flex-col xl:flex-row bg-surface-600 p-4 xl:p-0">
+<div class="relative w-full min-h-screen flex flex-col 2xl:flex-row bg-surface-600 p-4 2xl:p-0">
 	<aside
 		id="leftSidebar"
-		class="xl:sticky h-full top-20 bottom-20 left-6 xl:mr-6 flex-none xl:w-auto w-full flex items-start xl:items-center"
+		class="2xl:fixed left-6 2xl:top-1/2 2xl:-translate-y-1/2 2xl:mr-6 flex-none w-full 2xl:max-w-md flex items-start 2xl:items-center"
 	>
-		<div class="w-full border-[0.5px] border-surface-500 rounded-3xl xl:h-full px-6 md:px-10 py-12">
+		<div
+			class="w-full border-[0.5px] border-surface-500 rounded-3xl 2xl:h-full px-6 md:px-10 py-12"
+		>
 			<LeftSidebar />
 		</div>
 	</aside>
-	<main class="flex-1 min-w-0 overflow-auto px-6 py-20">
+	<main class="flex-1 min-w-0 overflow-auto px-12 py-20">
 		<slot />
 	</main>
 	<aside
 		id="rightMenu"
-		class="fixed xl:sticky xl:h-screen top-2 right-2 xl:right-16 pt-20 flex-none xl:w-auto w-full flex items-end xl:items-center flex-col"
+		class="fixed 2xl:sticky 2xl:h-screen top-2 right-2 2xl:right-16 pt-20 flex-none 2xl:w-auto w-full flex items-end 2xl:items-center flex-col"
 	>
 		<button
 			on:click={openDrawer}
@@ -51,7 +53,7 @@
 			</span>
 		</button>
 
-		<div id="floatingMenu" class="hidden fixed xl:flex">
+		<div id="floatingMenu" class="hidden fixed 2xl:flex">
 			<div
 				class="flex flex-col gap-4 justify-center border-[0.5px] border-surface-500 rounded-full h-full p-4 text-white"
 			>
